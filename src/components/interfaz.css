@@ -1,0 +1,91 @@
+.header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .task-search {
+    margin-bottom: 20px;
+  }
+  
+  .task-search input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .task-search input:focus {
+    border-color: #007bff;
+  }
+
+  .task-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-filters select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .task-filters select:focus {
+    border-color: #007bff;
+  }
+  
+  .task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-form input,
+  .task-form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .task-form input:focus,
+  .task-form select:focus {
+    border-color: #007bff;
+  }
+  
+  .task-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .task-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  
