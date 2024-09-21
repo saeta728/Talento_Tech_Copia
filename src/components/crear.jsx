@@ -48,7 +48,7 @@ function Crear() {
   return (
     <div className="seccion">
       <h1 className= "login">Crear cuenta</h1>
-      <h1>Crear cuenta</h1>
+      
       <input 
         className='ing' 
         type="text" 

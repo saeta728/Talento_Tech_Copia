@@ -25,7 +25,7 @@ function Login() {
 
     // Verificar si coincide con el usuario por defecto
     if ((username === defaultUser.nombre && password === defaultUser.password) || user) {
-      navigate('/interfaz'); // Redirigir si las credenciales son correctas
+      navigate('/Paso'); // Redirigir si las credenciales son correctas
     } else {
       setErrorMessage('Usuario o contraseña incorrectos');
     }
