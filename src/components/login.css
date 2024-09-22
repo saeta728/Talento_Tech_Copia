@@ -1,7 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .seccion {
   margin: 30px auto;
-  width: 400px;
+  width: 450px;
   padding: 25px;
   background-color: rgb(95, 152, 185);
   border: 2px solid rgb(0, 0, 0);
@@ -9,6 +14,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 60px;
 }
 
 .boton {
@@ -33,19 +39,55 @@
 }
 
 .ing {
-  width: 96%;
+  min-width: 400px;
   padding: 6px;
   margin-bottom: 25px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 14px;
+  max-height: 28px;
+  
 }
+
 
 .login {
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #333;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+body{
+  margin: 0;
+  margin-top: 0;
+  background-color: rgb(160, 229, 229);
+}
+
+.header{
+  display: flex;
+  height: 90px;
+  width: 100%;
+  background-color: rgb(85, 91, 197);
+  align-items: center;
+  
+}
+
+.espacio_imagen{
+  background-color: black;
+  margin: 4px;
+  height: 80px;
+  width: 100px;
+}
+
+.titulo{
+  margin-left: 50px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: black;
+  margin-top: 30px;
+}
+
+.boton_contenedor{
+  display: flex;
+}
