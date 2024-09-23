@@ -15,13 +15,17 @@ function Paso() {
   };
 
   return (
-    <div className="paso-container">
+    <body>
+      <div className="paso-container">
       <h1>Paso Intermedio</h1>
+      <h2>¿Que deseas hacer?</h2>
       <div className="botones-container">
         <button onClick={handleGenerarOrden} className="boton-generar">Generar Orden de Servicio</button>
         <button onClick={handleGenerarFactura} className="boton-generar">Generar Factura</button>
       </div>
     </div>
+    </body>
+    
   );
 }
 

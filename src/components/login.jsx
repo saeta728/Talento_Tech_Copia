@@ -3,6 +3,16 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
+function Encabezado() {
+  return(
+    <div className='header'>
+      <div className='espacio_imagen'></div>
+      <h1 className='titulo'>AUTOSENS</h1>
+    </div>
+  )
+};
+
+
 function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -40,10 +50,6 @@ function Login() {
   return (
     <>
     <body>
-      <div className='header'>
-        <div className='espacio_imagen'></div>
-        <h1 className='titulo'>AUTOSENS</h1>
-      </div>
       <form className='seccion' onSubmit={handleSubmit}>
         <h1 className='login'>Login</h1>
 
@@ -68,3 +74,5 @@ function Login() {
 }
 
 export default Login;
+export {Encabezado};
+

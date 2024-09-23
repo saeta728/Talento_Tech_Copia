@@ -29,6 +29,8 @@ function CuentaCobro() {
   };
 
   return (
+    <>
+    <h5>***PARA IMPRIMR SU FACTURA: "CTRL + P"</h5>
     <div className="cuenta-cobro">
       <h1>Cuenta de Cobro</h1>
       
@@ -67,6 +69,7 @@ function CuentaCobro() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
