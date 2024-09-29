@@ -5,10 +5,12 @@ import Recuperar from './components/recuperar.jsx';
 import Crear from './components/crear.jsx';
 import CuentaCobro from './components/CuentaCobro.jsx';
 import Paso from './components/Paso.jsx';
+import { Encabezado } from './components/login.jsx';
 
 function App() {
   return (
     <Router>
+      <Encabezado/>
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/interfaz' element={<Interfaz />} />

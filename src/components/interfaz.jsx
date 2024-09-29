@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './interfaz.css'; // Importa el archivo de estilos
+import { useNavigate } from "react-router-dom";
 
 function Interfaz() {
   // Se crea el estado para el número de orden
@@ -13,7 +14,11 @@ function Interfaz() {
     }
   }, []);
 
+//<<<<<<< HEAD
   
+//=======
+const navigate = useNavigate();
+//>>>>>>> e1040541dbf377b113c7ef8f1af886285d147f9e
 
   // Se crea el estado para datos de la orden
   const [datosCliente, setDatosCliente] = useState({
@@ -263,13 +268,10 @@ function Interfaz() {
           />
         </div>
       </fieldset>
-
-      <button onClick={handleGuardarOrden}>Guardar Orden</button>
+      <button onClick={() => {handleGuardarOrden();navigate('/cuentacobro');}}>Guardar Orden</button>
     </div>
     
   );
-
-
 
   return (
     <div className="interfaz-container">

@@ -2,6 +2,17 @@ import './login.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
+function Encabezado() {
+  return(
+    <div className='header'>
+      <div className='espacio_imagen'></div>
+      <h1 className='titulo'>AUTOSENS</h1>
+    </div>
+  )
+};
+
+
 function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -38,33 +49,30 @@ function Login() {
 
   return (
     <>
+    <body>
       <form className='seccion' onSubmit={handleSubmit}>
         <h1 className='login'>Login</h1>
-        <input
-          className='ing ing_usuario'
-          type="text"
-          placeholder='Ingrese su usuario'
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          className='ing ing_contraseña'
-          type="password"
-          placeholder='Ingrese su contraseña'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+
+          <input className='ing ing_usuario' type="text" placeholder='Ingrese su usuario' value={username}onChange={(e) => setUsername(e.target.value)}/>
+          <input className='ing ing_contraseña' type="password" placeholder='Ingrese su contraseña' value={password} onChange={(e) => setPassword(e.target.value)}/>
+
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+        <div className="boton_contenedor">
         <button type='submit' className='boton'>ENVIAR</button>
         <button type="button" onClick={() => navigate('/recuperar')} className='boton'>
           Recuperar contraseña
         </button>
+        </div>
         <button type="button" onClick={() => navigate('/crear')} className='boton'>
+          <small>¿No tienes cuenta?</small>
           Crear cuenta
         </button>
       </form>
+    </body>
     </>
   );
 }
 
 export default Login;
+export {Encabezado};
+

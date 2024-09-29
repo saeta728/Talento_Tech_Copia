@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CuentaCobro.css';
+ 
 
 function CuentaCobro() {
   const [numeroOrden, setNumeroOrden] = useState('');
   const [order, setOrder] = useState(null);
+  const navigate = useNavigate();
 
   // Función para buscar la orden en localStorage
   const handleBuscarOrden = () => {
@@ -29,17 +32,18 @@ function CuentaCobro() {
   };
 
   return (
+    <>
+    <h5>***PARA IMPRIMR SU FACTURA: "CTRL + P"***</h5>
     <div className="cuenta-cobro">
       <h1>Cuenta de Cobro</h1>
       
       <div>
         <label>Número de orden:</label>
-        <input
-          type="text"
-          value={numeroOrden}
-          onChange={(e) => setNumeroOrden(e.target.value)}
-        />
+        <input type="text"value={numeroOrden}onChange={(e) => setNumeroOrden(e.target.value)}/>
+        <div className='botones'>
         <button onClick={handleBuscarOrden}>Buscar Orden</button>
+        <button onClick={() => {navigate('/interfaz');}}>Eliminar Orden</button>
+        </div>
       </div>
 
       {order && (
@@ -67,6 +71,7 @@ function CuentaCobro() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
