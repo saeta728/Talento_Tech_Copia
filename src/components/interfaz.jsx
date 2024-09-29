@@ -4,8 +4,8 @@ import './interfaz.css'; // Importa el archivo de estilos
 function Interfaz() {
   // Se crea el estado para el número de orden
   const [numeroOrden, setNumeroOrden] = useState(1); // Inicia en 1
-
-  // Usar localStorage para guardar el número de orden
+  
+    // Usar localStorage para guardar el número de orden
   useEffect(() => {
     const numeroGuardado = localStorage.getItem('numeroOrden');
     if (numeroGuardado) {
@@ -13,13 +13,18 @@ function Interfaz() {
     }
   }, []);
 
+  
+
   // Se crea el estado para datos de la orden
   const [datosCliente, setDatosCliente] = useState({
+    fecha: '',
     nombre: '',
     identificacion: '',
     telefono: '',
+    telefono1: '',
     direccion: ''
   });
+  
 
   const [vehiculo, setVehiculo] = useState({
     marca: '',
@@ -37,6 +42,24 @@ function Interfaz() {
     precioInsumos: '',
     precioOtros: ''
   });
+
+    // Se genera error en fecha por formato errado
+  const [error, setError] = useState("");
+
+    // Se verifica el formato de la fecha ingresada
+    const handleChangeFecha = (e) => {
+      setDatosCliente({ ...datosCliente, fecha: e.target.value });
+    };
+    
+    // Validar la fecha solo cuando el usuario sale del campo de texto
+    const handleBlurFecha = () => {
+      const regex = /^\d{4}\/\d{2}\/\d{2}$/;
+      if (!regex.test(datosCliente.fecha) && datosCliente.fecha !== "") {
+        setError("Debe ingresar la fecha en el formato AAAA/MM/DD.");
+      } else {
+        setError(""); // Sin error si el formato es correcto o si el campo está vacío
+      }
+    };
 
   // Incrementar el número de orden y guardar la nueva orden
   const handleGuardarOrden = () => {
@@ -78,6 +101,20 @@ function Interfaz() {
           <input type="text" value={numeroOrden} readOnly />
         </div>
         <div className="form-group">
+          <label>Fecha de orden:</label>
+          <input
+            type="text"
+            value={datosCliente.fecha}
+            placeholder='AAAA/MM/DD'
+            onChange={handleChangeFecha}  // Solo actualiza el valor
+    onBlur={handleBlurFecha}  // Valida el formato cuando el usuario sale del campo
+          />                   
+        </div>
+        <div>
+              {error &&  <p className="error-message" >{error} </p>} 
+
+        </div>
+        <div className="form-group">
           <label>Nombre o razón social:</label>
           <input
             type="text"
@@ -99,6 +136,14 @@ function Interfaz() {
             type="text"
             value={datosCliente.telefono}
             onChange={(e) => setDatosCliente({ ...datosCliente, telefono: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
+          <label>Teléfono 2:</label>
+          <input
+            type="text"
+            value={datosCliente.telefono1}
+            onChange={(e) => setDatosCliente({ ...datosCliente, telefono1: e.target.value })}
           />
         </div>
         <div className="form-group">

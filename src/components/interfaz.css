@@ -77,14 +77,14 @@ legend {
   color: #333;
 }
 
-.error-message {
-  color: red;
-  font-size: 14px;
-}
-
 .success-message {
   color: green;
   font-size: 14px;
   text-align: center;
 }
-  
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
