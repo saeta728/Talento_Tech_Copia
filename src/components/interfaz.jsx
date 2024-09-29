@@ -268,7 +268,7 @@ const navigate = useNavigate();
           />
         </div>
       </fieldset>
-      <button onClick={() => {handleGuardarOrden();navigate('/cuentacobro');}}>Guardar Orden</button>
+      <button onClick={() => {handleGuardarOrden();navigate('/Paso');}}>Guardar Orden</button>
     </div>
     
   );

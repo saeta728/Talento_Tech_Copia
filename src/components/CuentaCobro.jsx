@@ -35,14 +35,14 @@ function CuentaCobro() {
     <>
     <h5>***PARA IMPRIMR SU FACTURA: "CTRL + P"***</h5>
     <div className="cuenta-cobro">
-      <h1>Cuenta de Cobro</h1>
+      <h1>Facturacion</h1>
       
       <div>
         <label>Número de orden:</label>
         <input type="text"value={numeroOrden}onChange={(e) => setNumeroOrden(e.target.value)}/>
         <div className='botones'>
         <button onClick={handleBuscarOrden}>Buscar Orden</button>
-        <button onClick={() => {navigate('/interfaz');}}>Eliminar Orden</button>
+        <button onClick={() => {navigate('/Paso');}}>Menu principal</button>
         </div>
       </div>
 
