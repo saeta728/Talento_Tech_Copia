@@ -18,4 +18,7 @@ npm run dev
 
 El uso del programas es sencillo y facil de entender, en caso de ser usuario nuevo se tiene que crear una cuenta, luego de crearla podra iniciar seccion sin problemas. (La opcion de recuperar contraseña es un demo). Una vez haya ingresado puede tener la opcion de crear una orden de servicio o obtener la factura de una orden previamente creada, a las ordenes se les asigna un valor auto incrementable, para buscar una orden solo se necesita que la busque por el numero identificador de dicha orden.
 
-AUTORES
+## AUTORES
+-Ferley Ardila Galvis - Desarrollador - Lider
+-Julian Dario Araque Cordero - Desarrollador - Relator
+-Jorge Eliecer Merchan Pineda - Desarrollador
