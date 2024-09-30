@@ -4,7 +4,7 @@
   margin: 0 auto;
   margin-top: 90px;
   width: 500px;
-  height: 300px;
+  height: 350px;
   padding: 30px;
   background-color: rgb(151, 173, 180);
   border-radius: 10px;
@@ -44,4 +44,19 @@
   
   .boton-generar:hover {
     background-color: #45a049;
+  }
+
+  .boton-logout {
+    margin: 20px auto;
+    width: 180px;
+    font-size: 1.2rem;
+    background-color: #f44336; /* Color rojo para indicar cierre de sesión */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton-logout:hover {
+    background-color: #d32f2f;
   }

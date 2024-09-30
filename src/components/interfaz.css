@@ -88,3 +88,12 @@ legend {
   font-size: 0.9em;
   margin-top: 5px;
 }
+
+.boton-ir-paso {
+  background-color: #4CAF50; /* Botón de color diferente para ir a Paso */
+}
+
+.boton-ir-paso:hover {
+  background-color: #45a049;
+}
+

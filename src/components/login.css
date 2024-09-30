@@ -74,11 +74,19 @@ body{
   
 }
 
-.espacio_imagen{
+.espacio_imagen {
+  display: flex;
+  justify-content: center; /* Centra el logo horizontalmente */
+  align-items: center; /* Centra el logo verticalmente */
   background-color: black;
   margin: 4px;
   height: 80px;
   width: 100px;
+}
+.imagen-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .titulo{

@@ -14,7 +14,7 @@ function Interfaz() {
     }
   }, []);
 
-//<<<<<<< HEAD
+  //<<<<<<< HEAD
   
 //=======
 const navigate = useNavigate();
@@ -78,7 +78,7 @@ const navigate = useNavigate();
 
     // Recupera las órdenes existentes desde el localStorage (si hay alguna)
     const ordenesGuardadas = JSON.parse(localStorage.getItem('orders')) || [];
-
+    
     // Agrega la nueva orden al arreglo
     ordenesGuardadas.push(nuevaOrden);
 
@@ -93,6 +93,10 @@ const navigate = useNavigate();
     localStorage.setItem('numeroOrden', nuevoNumeroOrden);
 
     console.log("Nueva orden guardada", { numeroOrden, datosCliente, vehiculo, servicios });
+  };
+
+  const handleIrAPaso = () => {
+    navigate('/paso'); // Redirige a la página Paso.jsx directamente
   };
 
   return (
@@ -268,7 +272,10 @@ const navigate = useNavigate();
           />
         </div>
       </fieldset>
-      <button onClick={() => {handleGuardarOrden();navigate('/Paso');}}>Guardar Orden</button>
+      <div className="botones-container">
+        <button onClick={() => {handleGuardarOrden();navigate('/Paso');}}>Guardar Orden</button>
+        <button onClick={handleIrAPaso} className="boton-ir-paso">Menú Principal</button>
+      </div>
     </div>
     
   );

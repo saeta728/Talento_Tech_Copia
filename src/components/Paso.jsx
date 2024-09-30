@@ -14,15 +14,20 @@ function Paso() {
     navigate('/cuentacobro'); // Redirige a la página CuentaCobro.jsx
   };
 
+  const handleLogout = () => {
+    navigate('/'); // Redirige al componente Login.jsx
+  };
+
   return (
     <body>
       <div className="paso-container">
-      <h1>Paso Intermedio</h1>
+      <h1>Menú Principal</h1>
       <h2>¿Que deseas hacer?</h2>
       <div className="botones-container">
         <button onClick={handleGenerarOrden} className="boton-generar">Generar Orden de Servicio</button>
         <button onClick={handleGenerarFactura} className="boton-generar">Generar Factura</button>
       </div>
+      <button onClick={handleLogout} className="boton-logout">Cerrar Sesión</button>
     </div>
     </body>
     

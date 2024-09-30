@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom';
 function Encabezado() {
   return(
     <div className='header'>
-      <div className='espacio_imagen'></div>
+      <div className='espacio_imagen'>
+      <img src="/public/logo.png" alt="Logo" className="imagen-logo" />
+      </div>
       <h1 className='titulo'>AUTOSENS</h1>
     </div>
   )
