@@ -19,7 +19,7 @@ function CuentaCobro() {
     }
   };
 
-  // Calcular total de factura
+  // Calcula el total de la factura
   const calcularTotal = () => {
     if (order && order.servicios) {
       return (

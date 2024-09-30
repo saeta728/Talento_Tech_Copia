@@ -30,24 +30,20 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Obtener los usuarios almacenados en localStorage
+    // Obtiene los usuarios almacenados en localStorage
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    // Buscar el usuario, ya sea el predeterminado o uno creado
+    // Busca el usuario, ya sea el predeterminado o uno creado
     const user = users.find((user) => user.nombre === username && user.password === password);
 
-    // Verificar si coincide con el usuario por defecto
+    // Verifica si coincide con el usuario por defecto
     if ((username === defaultUser.nombre && password === defaultUser.password) || user) {
-      navigate('/Paso'); // Redirigir si las credenciales son correctas
+      navigate('/Paso'); // Redirige si las credenciales son correctas
     } else {
       setErrorMessage('Usuario o contraseña incorrectos');
     }
 
   };
-
-
-
-
 
   return (
     <>

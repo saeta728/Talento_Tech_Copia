@@ -13,17 +13,17 @@ function Recuperar() {
   // Obtener usuarios almacenados en localStorage
   const users = JSON.parse(localStorage.getItem('users')) || [];
 
-  // Verificar si el correo ingresado es el predeterminado
+  // Verifica si el correo ingresado es el predeterminado
   if (email === defaultEmail) {
     setMessage(`Se ha enviado un correo de recuperación a ${email}`);
     
     //Si el correo es correcto, se muestra un mensaje y se redirige al usuario a la página de login después de 2 segundos con setTimeout(() => navigate('/'), 2000);
     setTimeout(() => navigate('/'), 2000); // Redirigir al login después de 2 segundos
   }
-  // Verificar si el correo existe en los usuarios creados
+  // Verifica si el correo existe en los usuarios creados
   else if (users.some((user) => user.email === email)) {
     setMessage(`Se ha enviado un correo de recuperación a ${email}`);
-    setTimeout(() => navigate('/'), 2000); // Redirigir al login después de 2 segundos
+    setTimeout(() => navigate('/'), 2000); // Redirige al login después de 2 segundos
   } else {
     setMessage('El correo ingresado no está registrado o no es válido');
     //Si el correo es incorrecto, el usuario se queda en la página de recuperación y se muestra el mensaje de error.

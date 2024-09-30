@@ -1,11 +1,11 @@
 # GESTIÓN DE SERVICIOS A VEHÍCULOS EN UN CENTRO DE SERVICIO AUTOMOTRIZ
 
 ## DESCRIPCION
-Este repositorio contiene un aplicativo web desarrollado para llevar una correcta y sencilla gestion, para la demostracion se puso a prueba una gestion de servicios a vehiculos la cual puede adaptarse a otro tipo de servicios en caso de que se requiera. desde el mencionado aplicativo se podra resgistrar varias usuarios e ingresar un usuario que sea encargada de la gestion de su empresa, seguido de eso puede crear y guardar una orden o servicio el cual temporalmente podra imprimirlo en el formato de una factura.
+Este repositorio contiene un aplicativo web desarrollado para llevar una correcta y sencilla gestion; para la demostracion se puso a prueba una gestion de servicios a vehiculos la cual puede adaptarse a otro tipo de servicios en caso de que se requiera. Desde el mencionado aplicativo se podra resgistrar varias cuentas de usuarios e ingresar con un usuario que permitirá encargarse de la gestion de su empresa; seguido de eso, puede crear y guardar una orden o servicio el cual temporalmente podra imprimirlo en el formato de una factura.
 
 
 ## INSTALACION Y USO
-Para poder instalar y usar el programa debera situarse en visual code con el archivo contenedor del programa ya seleccionado, una vez este situado correctamente en el archivo debera abrir la terminal puede hacer uso de: " ctrl + ñ ", ahora debera instalar los programas para que el proyecta pueda funcionar, esto lo hara con los siguiente comando en la terminal siguiendo el orden:
+Para poder instalar y usar el programa debera situarse en visual code con el archivo contenedor del programa ya seleccionado, una vez este situado correctamente en el archivo debera abrir la terminal, para lo cual puede hacer uso de: " ctrl + ñ ", ahora debera instalar los programas para que el proyecta pueda funcionar, esto lo hara con los siguiente comando en la terminal siguiendo el orden:
 
 ```Primer paso
 

@@ -14,11 +14,8 @@ function Interfaz() {
     }
   }, []);
 
-  //<<<<<<< HEAD
-  
-//=======
-const navigate = useNavigate();
-//>>>>>>> e1040541dbf377b113c7ef8f1af886285d147f9e
+  const navigate = useNavigate();
+
 
   // Se crea el estado para datos de la orden
   const [datosCliente, setDatosCliente] = useState({
@@ -56,7 +53,7 @@ const navigate = useNavigate();
       setDatosCliente({ ...datosCliente, fecha: e.target.value });
     };
     
-    // Validar la fecha solo cuando el usuario sale del campo de texto
+    // Valida la fecha solo cuando el usuario sale del campo de texto
     const handleBlurFecha = () => {
       const regex = /^\d{4}\/\d{2}\/\d{2}$/;
       if (!regex.test(datosCliente.fecha) && datosCliente.fecha !== "") {
@@ -66,9 +63,9 @@ const navigate = useNavigate();
       }
     };
 
-  // Incrementar el número de orden y guardar la nueva orden
+  // Incrementa el número de orden y guarda la nueva orden
   const handleGuardarOrden = () => {
-    // Crear el objeto de la orden actual con toda la información
+    // Crea el objeto de la orden actual con toda la información
     const nuevaOrden = {
       numeroOrden,
       datosCliente,
@@ -282,11 +279,7 @@ const navigate = useNavigate();
 
   return (
     <div className="interfaz-container">
-      <h1>Orden de Servicio</h1>
-      
-      {/* Los formularios y campos de datos se mantienen igual */}
-      {/* ... */}
-      
+      <h1>Orden de Servicio</h1>           
       <button onClick={handleGuardarOrden}>Guardar Orden</button>
     </div>
   );
